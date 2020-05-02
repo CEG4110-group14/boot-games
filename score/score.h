@@ -6,25 +6,30 @@
 #define CHERRY 15
 #define BANANA 20
 #define WATERMELON 25
-#define MULTIPLIER 1.0
 
 struct Score {
-    int multiplier;
-    int apple;
-    int cherry;
-    int banana;
-    int watermelon; 
+int multiplier;
+int apple;
+int cherry;
+int banana;
+int watermelon; 
 };
 
 /**
- * Initializes scoring variables for game start
- * @param scoreStart refernces struct Score to initialize scoring values and multiplier
- */
+* Initializes scoring variables for game start
+* @param scoreStart refernces struct Score to initialize scoring values and multiplier
+*/
 void score_init(struct Score *scoreStart);
+
+void easy(struct Score *mode);
+void medium(struct Score *mode);
+void hard(struct Score *mode);
 
 int apple_point(struct Player *player, struct Score points);
 int cherry_point(struct Player *player, struct Score points);
 int banana_point(struct Player *player, struct Score points);
 int watermelon_point(struct Player *player, struct Score points);
+
+void game_over();
 
 #endif

@@ -9,3 +9,7 @@ void snake_object_init(struct Snake * snake_object, int location_x, int location
     snake_object->head_direction = 'e';
 
 }
+
+void set_eat_function(struct Snake * snake_object, void (*eat)()) {
+    snake_object->eat = eat;
+}

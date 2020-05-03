@@ -31,17 +31,31 @@ int watermelon;
 void score_init(struct Score *scoreStart);
 
 /**
- * Difficulty fucntions that assigned associated difficulty multiplier value
+ * Difficulty function that assignes associated difficulty multiplier value
  * to multiplier (default value is 1): easy = 1, medium = 2, hard = 3
  * @param mode make call to struct Score multiplier to assign the diffiulty
  * multiplier value
  */
 void easy(struct Score *mode);
+
+/**
+ * Difficulty function that assignes associated difficulty multiplier value
+ * to multiplier (default value is 1): easy = 1, medium = 2, hard = 3
+ * @param mode make call to struct Score multiplier to assign the diffiulty
+ * multiplier value
+ */
 void medium(struct Score *mode);
+
+/**
+ * Difficulty function that assignes associated difficulty multiplier value
+ * to multiplier (default value is 1): easy = 1, medium = 2, hard = 3
+ * @param mode make call to struct Score multiplier to assign the diffiulty
+ * multiplier value
+ */
 void hard(struct Score *mode);
 
 /**
- * Point additions that are called when the snake collides the the corresponding
+ * Point addition that is called when the snake collides the the corresponding
  * point value location. The Player currentScore accumulates points based on the
  * points earned (aka currentScore += points) point values are: Apple =10, Cherry =15
  * Banana = 20, Watermelon = 25
@@ -50,8 +64,38 @@ void hard(struct Score *mode);
  * @return Retuns the current player score for the snake game
  */
 int apple_point(struct Player *player, struct Score points);
+
+/**
+ * Point addition that is called when the snake collides the the corresponding
+ * point value location. The Player currentScore accumulates points based on the
+ * points earned (aka currentScore += points) point values are: Apple =10, Cherry =15
+ * Banana = 20, Watermelon = 25
+ * @param player Used to call player->currentScore with += points value
+ * @param points Used to call points.fruit to add and update current score
+ * @return Retuns the current player score for the snake game
+ */
 int cherry_point(struct Player *player, struct Score points);
+
+/**
+ * Point addition that is called when the snake collides the the corresponding
+ * point value location. The Player currentScore accumulates points based on the
+ * points earned (aka currentScore += points) point values are: Apple =10, Cherry =15
+ * Banana = 20, Watermelon = 25
+ * @param player Used to call player->currentScore with += points value
+ * @param points Used to call points.fruit to add and update current score
+ * @return Retuns the current player score for the snake game
+ */
 int banana_point(struct Player *player, struct Score points);
+
+/**
+ * Point addition that is called when the snake collides the the corresponding
+ * point value location. The Player currentScore accumulates points based on the
+ * points earned (aka currentScore += points) point values are: Apple =10, Cherry =15
+ * Banana = 20, Watermelon = 25
+ * @param player Used to call player->currentScore with += points value
+ * @param points Used to call points.fruit to add and update current score
+ * @return Retuns the current player score for the snake game
+ */
 int watermelon_point(struct Player *player, struct Score points);
 
 /**
